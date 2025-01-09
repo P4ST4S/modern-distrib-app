@@ -2,9 +2,9 @@ services:
   api:
     build: .
     ports:
-      - "5000:3000"
-    # env_file:
-    #   - .env
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+    env_file:
+      - .env
     networks:
       - app-network
 
